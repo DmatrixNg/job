@@ -210,10 +210,11 @@
           <div class="row text-center">
             <div class="col-12" data-aos="zoom-in">
               <div class="heading">
-                <h1 class="text-white mb-25">Get Started with Theme</h1>
+                <h1 class="text-white mb-25">Restaurants</h1>
               </div>
               <div class="row text-center">
-                @foreach(\App\Vendor::all() as $store)
+
+                @foreach(\App\Vendor::where("type",'restaurants')->get() as $store)
                 <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
                   <div class="card featured-item">
                     <div class="card-body ptb-45">
@@ -251,76 +252,6 @@
       <footer>
         <div class="footer-widget-area bg-light ptb-100">
           <div class="container">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-4 col-lg-5 mb-sm-40">
-                <div class="footer-widget about">
-                  <div class="footer-logo mb-20">
-                    <a href="index.html"><img src="assets/img/logo.png" alt="RNR"></a>
-                  </div>
-                  <div class="widget-content">
-                    <p>Randomised words which don't look even slightlyvable. If you are going to use a passage of Lorem Ipsum, you need to be sure ook even slightly.</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Widget End -->
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-sm-40">
-                <div class="footer-widget">
-                  <h4 class="widget-title mb-10">Helpful Links</h4>
-                  <hr class="line">
-                  <div class="widget-content mt-20 clearfix">
-                    <ul class="list-unstyled float-left">
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">FAQ’s</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
-                    <ul class="list-unstyled float-left">
-                      <li><a href="#">Features</a></li>
-                      <li><a href="#">Team</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Pricing</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- Widget End -->
-              <div class="col-6 col-sm-3 col-md-2 col-lg-2">
-                <div class="footer-widget">
-                  <h4 class="widget-title mb-10">Resources</h4>
-                  <hr class="line">
-                  <div class="widget-content mt-20">
-                    <ul class="list-unstyled">
-                      <li><a href="#">Download</a></li>
-                      <li><a href="#">Events</a></li>
-                      <li><a href="#">Patners</a></li>
-                      <li><a href="#">Help Center</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- Widget End -->
-              <div class="col-6 col-sm-3 col-md-2 col-lg-2">
-                <div class="footer-widget">
-                  <h4 class="widget-title mb-10">Product</h4>
-                  <hr class="line">
-                  <div class="widget-content mt-20">
-                    <ul class="list-unstyled">
-                      <li><a href="#">Search API</a></li>
-                      <li><a href="#">Analytics</a></li>
-                      <li><a href="#">Query rules</a></li>
-                      <li><a href="#">Offline Search</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- Widget End -->
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright bg-white ptb-15">
-          <div class="container d-sm-flex">
-            <p class="mb-0">Copyrights &copy; 2019 All Rights Reserved by rnr</p>
-            <p class="mb-0 ml-auto">Design by Regal theme</p>
           </div>
         </div>
       </footer>
