@@ -22,7 +22,21 @@ Auth::routes();
 Route::get('/track_delivery', function () {
     return view('store.track_delivery');
 });
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/product_categories', function () {
+    return view('store.product_categories');
+});
+Route::get('/restaurants', function () {
+    return view('store.restaurants');
+});
+Route::get('/all_groceries', function () {
+    return view('store.all_groceries');
+});
+// Route::get('/home', 'HomeController@stores')->name('home');
+
+Route::get('/home', function () {
+ $stores = \App\Vendor::all();
+  return view('store.public', ['stores' => $stores]);
+});
 Route::get('/accept', 'RequestController@accept');
 Route::get('/done', 'RequestController@done');
 Route::get('/cancel', 'RequestController@cancel');
