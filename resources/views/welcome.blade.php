@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Job</title>
+
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="{{asset('style.css')}}">
+
+        <!-- Modernizer JS -->
+        <script src="{{asset('assets/js/vandor/modernizr-3.5.0.min.js')}}"></script>
+
+    </head>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <body>
+      <!-- Preloader Start -->
+      <div id="fadeout" class="loader w-100 h-100 position-absolute">
+        <div class="h-100 d-flex justify-content-center align-items-center">
+          <div class="one circle"></div>
+          <div class="two circle"></div>
+        </div>
+      </div>
+      <!-- Preloader End -->
+
+      <!-- Header Start -->
+      <header class="position-fixed w-100">
+        <nav id="active-sticky" class="navbar navbar-light navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="rnr"></a>
+            <button class="navbar-toggler navber-toggler-right" data-toggle="collapse" data-target="#navbarToggler">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                  <a href="{{ url('/stores')}}" class="nav-link">Stores</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/product_categories')}}" class="nav-link">Product categories</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/track_delivery')}}" class="nav-link">Track delivery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/all_groceries')}}" class="nav-link">All groceries</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/restaurants')}}" class="nav-link">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/help_desk')}}" class="nav-link">Help desk</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/checkout')}}" class="nav-link">
+                  <img width="30" src="{{asset('download.png')}}" alt=""><span id="count" cart="@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif" class="badge badge-pill badge-danger">@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif</span> </a>
+                </li>
+
+              </ul>
+              <!-- Authentication Links -->
+              @guest
+                <div class="pl-20">
+                      <a class="btn btn-sm btn-primary rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </div>
+                  @if (Route::has('register'))
+                    <div class="pl-20">
+                          <a <a class="btn btn-sm btn-primary rounded" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </div>
+                  @endif
+                  @else
+                    <div class="pl-20">
+
+                    <a class="btn btn-sm btn-primary rounded" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                      {{ __('Logout') }}
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                      @csrf
+                                  </form>
+                                </div>
+
+              @endguest
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Header End -->
+
+
+      <!-- Featured Section Start -->
+      <section class="section-ptb bg-white">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12" data-aos="zoom-in">
+              <div class="row">
+
+              <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30" style="padding:30px">
+                <form class="input-group text-center" action="search">
+                  <input class="form-control" type="text" placeholder="Search..">
+                  <div class="input-group-append">
+                    <button type="submit" class="input-group-text"><i class="ti-search"></i></button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+
+              </div>
+            </div>
+              <div class="heading mb-50">
+                <h2>Top Stores</h2>
+                <hr class="line bw-2 mx-auto line-sm mb-5">
+                <hr class="line bw-2 mx-auto">
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            @foreach(\App\Vendor::all() as $store)
+            <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
+              <div class="card featured-item">
+                <div class="card-body ptb-45">
+                  <div class="icon circle-icon mb-30 mx-auto">
+                    <i class="ti-shield"></i>
+                  </div>
+                  <h5>{{$store->name}}</h5>
+                  <p class="mb-20">{{$store->des}}</p>
+                  <a class="item-link link-btn" href="{{url('/stores')}}/p/{{$store->slug}}">Enter Store</a>
+                </div>
+              </div>
+            </div>
+            <!-- Single Featured End -->
+            @endforeach
+            <!-- <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card featured-item">
+                <div class="card-body ptb-45">
+                  <div class="icon circle-icon mb-30 mx-auto">
+                    <i class="ti-lock"></i>
+                  </div>
+                  <h5>Security included</h5>
+                  <p class="mb-20">Cicero are also reproduc heir exact original form, accompanied pani da</p>
+                  <a class="item-link link-btn" href="#">Read More</a>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+      <section class="section bg-white">
+        <div class="container ptb-30">
+          <div class="row text-center">
+            <div class="col-12" data-aos="zoom-in">
+
+              <div class="heading mb-50">
+                <h2>Top sales</h2>
+                <hr class="line bw-2 mx-auto line-sm mb-5">
+                <hr class="line bw-2 mx-auto">
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            @foreach(\App\Product::all() as $product)
+            <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
+              <div class="card featured-item">
+                <div class="card-body ptb-45">
+                  <div class="icon circle-icon mb-30 mx-auto">
+                    <i class="ti-shield"></i>
+                  </div>
+                  <h5>{{$product->name}}</h5>
+                  <p class="mb-20">{{$product->des}}</p>
+                  <a class="item-link link-btn" href="{{url('/stores')}}/p/{{$store->slug}}">Enter Shop</a>
+                </div>
+              </div>
+            </div>
+            <!-- Single Featured End -->
+            @endforeach
+            <!-- <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card featured-item">
+                <div class="card-body ptb-45">
+                  <div class="icon circle-icon mb-30 mx-auto">
+                    <i class="ti-lock"></i>
+                  </div>
+                  <h5>Security included</h5>
+                  <p class="mb-20">Cicero are also reproduc heir exact original form, accompanied pani da</p>
+                  <a class="item-link link-btn" href="#">Read More</a>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+      <!-- Featured Section End -->
+
+      <!-- Promo Box Start -->
+      <section class="promo-area section-ptb bg-4 bg-primary">
+        <div class="container ptb-30">
+          <div class="row text-center">
+            <div class="col-12" data-aos="zoom-in">
+              <div class="heading">
+                <h1 class="text-white mb-25">Get Started with Theme</h1>
+              </div>
+              <div class="row text-center">
+                @foreach(\App\Vendor::all() as $store)
+                <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
+                  <div class="card featured-item">
+                    <div class="card-body ptb-45">
+                      <div class="icon circle-icon mb-30 mx-auto">
+                        <i class="ti-shield"></i>
+                      </div>
+                      <h5>{{$store->name}}</h5>
+                      <p class="mb-20">{{$store->des}}</p>
+                      <a class="item-link link-btn" href="{{url('/stores')}}/p/{{$store->slug}}">Enter Shop</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Featured End -->
+                @endforeach
+                <!-- <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card featured-item">
+                    <div class="card-body ptb-45">
+                      <div class="icon circle-icon mb-30 mx-auto">
+                        <i class="ti-lock"></i>
+                      </div>
+                      <h5>Security included</h5>
+                      <p class="mb-20">Cicero are also reproduc heir exact original form, accompanied pani da</p>
+                      <a class="item-link link-btn" href="#">Read More</a>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Promo Box End -->
+      <!-- Footer Secion Start -->
+      <footer>
+        <div class="footer-widget-area bg-light ptb-100">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-4 col-lg-5 mb-sm-40">
+                <div class="footer-widget about">
+                  <div class="footer-logo mb-20">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="RNR"></a>
+                  </div>
+                  <div class="widget-content">
+                    <p>Randomised words which don't look even slightlyvable. If you are going to use a passage of Lorem Ipsum, you need to be sure ook even slightly.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Widget End -->
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-sm-40">
+                <div class="footer-widget">
+                  <h4 class="widget-title mb-10">Helpful Links</h4>
+                  <hr class="line">
+                  <div class="widget-content mt-20 clearfix">
+                    <ul class="list-unstyled float-left">
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">FAQ’s</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="list-unstyled float-left">
+                      <li><a href="#">Features</a></li>
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Pricing</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Widget End -->
+              <div class="col-6 col-sm-3 col-md-2 col-lg-2">
+                <div class="footer-widget">
+                  <h4 class="widget-title mb-10">Resources</h4>
+                  <hr class="line">
+                  <div class="widget-content mt-20">
+                    <ul class="list-unstyled">
+                      <li><a href="#">Download</a></li>
+                      <li><a href="#">Events</a></li>
+                      <li><a href="#">Patners</a></li>
+                      <li><a href="#">Help Center</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Widget End -->
+              <div class="col-6 col-sm-3 col-md-2 col-lg-2">
+                <div class="footer-widget">
+                  <h4 class="widget-title mb-10">Product</h4>
+                  <hr class="line">
+                  <div class="widget-content mt-20">
+                    <ul class="list-unstyled">
+                      <li><a href="#">Search API</a></li>
+                      <li><a href="#">Analytics</a></li>
+                      <li><a href="#">Query rules</a></li>
+                      <li><a href="#">Offline Search</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Widget End -->
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright bg-white ptb-15">
+          <div class="container d-sm-flex">
+            <p class="mb-0">Copyrights &copy; 2019 All Rights Reserved by rnr</p>
+            <p class="mb-0 ml-auto">Design by Regal theme</p>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Secion End -->
+
+      <!-- JS Files -->
+      <script src="{{asset('assets/js/vandor/jquery-3.2.1.min.js')}}"></script>
+      <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+      <script src="{{asset('assets/js/popper.min.js')}}"></script>
+      <script src="{{asset('assets/js/plugins.js')}}"></script>
+      <script src="{{asset('assets/js/main.js')}}"></script>
+    </body>
+</html>

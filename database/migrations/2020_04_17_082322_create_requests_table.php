@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateRequestsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('requests', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('orderId');
+            $table->integer('pay')->nullable();
+            $table->string('pickup_code')->nullable();
+            $table->string('status')->nullable();
+            $table->timestamps();
+
+            $table->foreign('orderId')->references('id')->on('orders')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('requests');
+    }
+}
