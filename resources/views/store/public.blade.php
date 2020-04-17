@@ -31,7 +31,8 @@
       </div>
     </div>
     <div class="row text-center">
-
+<a href="/store" class="btn bg-primary"> Create store </a>
+<br>
           @foreach($stores as $store)
           <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
             <div class="card featured-item">
