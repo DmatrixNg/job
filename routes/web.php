@@ -23,13 +23,17 @@ Route::get('/track_delivery', function () {
     return view('store.track_delivery');
 });
 Route::get('/product_categories', function () {
-    return view('store.product_categories');
+  $stores = [];
+    return view('store.product_categories',['stores' => $stores]);
 });
 Route::get('/restaurants', function () {
-    return view('store.restaurants');
+  $stores = \App\Vendor::where('type','restaurants')->get();
+    return view('store.restaurants',['stores' => $stores]);
 });
 Route::get('/all_groceries', function () {
-    return view('store.all_groceries');
+  $stores = \App\Vendor::where('type','groceries')->get();
+
+    return view('store.all_groceries',['stores' => $stores]);
 });
 // Route::get('/home', 'HomeController@stores')->name('home');
 
