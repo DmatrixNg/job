@@ -34,7 +34,7 @@
       <header class="position-fixed w-100">
         <nav id="active-sticky" class="navbar navbar-light navbar-expand-lg">
           <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="rnr"></a>
+            <a class="navbar-brand" href="{{ url('/')}}"><img src="assets/img/logo.png" alt="rnr"></a>
             <button class="navbar-toggler navber-toggler-right" data-toggle="collapse" data-target="#navbarToggler">
               <span class="navbar-toggler-icon"></span>
             </button>
