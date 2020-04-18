@@ -116,7 +116,6 @@
     function AddCart(store, p_id, action) {
 
       url = "{{ url('/add_cart')}}";
-      //  id=id+"&act="+action;
       a.ajax({
         url: url,
         type: "Get",
@@ -128,7 +127,6 @@
         dataType: "json",
         beforeSend: function() {
           let intcount = a('#count').attr('cart');
-          // console.log(a('#like'+id+" button").attr('onclick','like(0,10)'));
           if (action == 1) {
             let count = ++intcount;
             a('#count').html(count);
@@ -156,10 +154,7 @@
       .then(
         function(data) {
 
-          console.log(data);
-          // a('#like' + id).html(data.button);
-          // a('#lcount'+id).html(data.count);
-          // a('#lcount'+id).toggleClass('active');
+          // console.log(data);
 
         });
 
@@ -175,8 +170,8 @@
     })
     .then(
       function(data) {
-        //console.log(data);
-        $('#movie_list').html(data);
+        // console.log(data);
+        $('#product_list').html(data);
         $('.load-more').hide();
         const link = document.querySelector('[rel = next]');
 
@@ -213,9 +208,15 @@
               })
               .then(
               function(data) {
-                // console.log(data);
-                $('#movie_list').html(data);
+                console.log(data);
+                $('#product_list').html(data);
                 $('.load-more').hide();
+                const link = document.querySelector('[rel = next]');
+
+                // console.log(link);
+                if (link == null) {
+                  $(".pagi").hide();
+                }
               });
             }
           });
@@ -223,7 +224,7 @@
       </script>
       <script>
 
-        function getMovies(url) {
+        function getProduct(url) {
           $.ajax({
             url: url,
             beforeSend: function() {
@@ -232,8 +233,8 @@
             },
           }).done(function(data) {
             $('.load-more').hide();
-            $('#movie_list').html(data);
-            $('#movie_list').focus();
+            $('#product_list').html(data);
+            $('#product_list').focus();
             const link = document.querySelector('[rel = next]');
 
             // console.log(link);
@@ -241,7 +242,7 @@
               $(".pagi").hide();
             }
           }).fail(function() {
-            alert('Movies could not be loaded.');
+            alert('Product could not be loaded.');
           });
         }
         $("#next").click(function() {
@@ -251,7 +252,7 @@
           // console.log(link);
           if (link !== null) {
             const url = link.href;
-            getMovies(url);
+            getProduct(url);
           }
         });
         $("#previous").click(function() {
@@ -260,7 +261,7 @@
           // console.log(link);
           if (link !== null) {
             const url = link.href;
-            getMovies(url);
+            getProduct(url);
           }
         });
       </script>

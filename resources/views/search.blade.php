@@ -67,7 +67,7 @@
                   </div>
                 </div>
               </div>
-            <div id="movie_list"></div>
+            <div id="product_list"></div>
               <style media="screen">
                 .paginate {
                   height: 100%;

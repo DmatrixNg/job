@@ -1,66 +1,75 @@
 @extends('layouts.app')
-@section('title', "Stores")
-@section('content')
-<!-- Featured Section Start -->
-<section class="section-ptb bg-white">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-12" data-aos="zoom-in">
-        <div class="row">
-
-        <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30" style="padding:30px">
-          <form class="input-group text-center" action="search">
-            <input class="form-control" type="text" placeholder="Search..">
-            <div class="input-group-append">
-              <button type="submit" class="input-group-text"><i class="ti-search"></i></button>
-            </div>
-          </form>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
-
-        </div>
-      </div>
-        <div class="heading mb-50">
-          <h2>Product Categories</h2>
-          <hr class="line bw-2 mx-auto line-sm mb-5">
-          <hr class="line bw-2 mx-auto">
-        </div>
-      </div>
-    </div>
-    <div class="row text-center">
-
-          @foreach($stores as $store)
-          <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
-            <div class="card featured-item">
-              <div class="card-body ptb-45">
-                <div class="icon circle-icon mb-30 mx-auto">
-                  <i class="ti-shield"></i>
-                </div>
-                <h5>{{$store->name}}</h5>
-                <p class="mb-20">{{$store->des}}</p>
-                <a class="item-link link-btn" href="{{url('/stores')}}/p/{{$store->slug}}">Enter Store</a>
-              </div>
-            </div>
-          </div>
-          <!-- Single Featured End -->
-          @endforeach
-          <!-- <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in" data-aos-delay="400">
-            <div class="card featured-item">
-              <div class="card-body ptb-45">
-                <div class="icon circle-icon mb-30 mx-auto">
-                  <i class="ti-lock"></i>
-                </div>
-                <h5>Security included</h5>
-                <p class="mb-20">Cicero are also reproduc heir exact original form, accompanied pani da</p>
-                <a class="item-link link-btn" href="#">Read More</a>
-              </div>
-            </div>
-          </div> -->
-
-        </div>
-      </div>
-    </section>
+@section('title')
+Product Categories
 @endsection
+
+@section('content')
+<div class="header-space"></div>
+<!-- Header End -->
+<!-- Breadcrumb Area Start -->
+<nav class="breadcrumb-area bg-dark bg-6 ptb-70">
+  <div class="container d-md-flex">
+    <h2 class="text-white mb-0">Product Categories</h2>
+    <ol class="breadcrumb p-0 m-0 bg-dark ml-auto">
+      <li class="breadcrumb-item"><a href="/">Home</a> <span class="text-white">/</span></li>
+      <li aria-current="page" class="breadcrumb-item active">Product Categories</li>
+    </ol>
+  </div>
+</nav>
+<main class="container">
+    <section class="row mx-0">
+        <section class="col-lg-3 sidebar pl-0 pr-3">
+
+
+                <i class="fa fa-arrow-left arrow"></i>
+
+
+            <form action="">
+
+                <div class="widget recent-post bg-white mb-30">
+                  <div class="widget-title mb-15">
+                    <h4 class="mb-10">Categories</h4>
+                    <hr class="line bw-2">
+                  </div>
+                  <div class="list-unstyled">
+
+                    <p class="tags"> <input type="checkbox" class="tags" name="tags[]" value="food" id="">food</p>
+                    <p class="tags"> <input type="checkbox" class="tags" name="tags[]" id="" value="Wears">Wears</p>
+                    <p class="tags"> <input type="checkbox" class="tags" name="tags[]" id="" value="Things">Things</p>
+                    <p class="tags"> <input type="checkbox" class="tags" name="tags[]" id="" value="Services">Services</p>
+                    <p class="tags"> <input type="checkbox" class="tags" name="tags[]" id="" value="Others">Others</p>
+                  </div>
+              </div>
+            </form>
+
+        </section>
+
+        <section class="col-lg-9 main_page pl-3 pr-0">
+              <div class="row text-center">
+                <div class="col-12" data-aos="zoom-in">
+
+
+                </div>
+              </div>
+            <div id="product_list"></div>
+              <style media="screen">
+
+                .pagi {
+                  text-align: center;
+                }
+              </style>
+              <div class="pagi">
+
+              <span><button class="paginate btn-primary" id="previous">PREVIOUS</button></span>
+              <span><button class="paginate btn-primary" id="next">NEXT </button></span>
+            </div>
+          <!-- Blog Posts End -->
+
+        </section>
+
+
+    </section>
+
+</main>
+
+    @endsection
