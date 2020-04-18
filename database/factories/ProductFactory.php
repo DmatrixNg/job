@@ -22,10 +22,11 @@ $factory->define(Product::class, function (Faker $faker) {
       'product_desc' => $faker->realText(200),
       'product_full_desc' => $faker->realText(200),
       'product_type' => $faker->randomElement($array = array (
-                        'groceries',
-                        'restaurants',
-                        'shop',
-                        'others',
+                        'food',
+                        'Wears',
+                        'Things',
+                        'Services',
+                        'Others',
                       )),
       'status' => $faker->boolean()
     ];

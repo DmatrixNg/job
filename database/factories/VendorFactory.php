@@ -13,12 +13,12 @@ $factory->define(Vendor::class, function (Faker $faker) {
         'logo'  => $faker->image(public_path('/storage'), 300, 300, 'cats', true, true, 'Job'),
         'des'  => $faker->text($maxNbChars = 200),
         'type' => $faker->randomElement($array = array (
-                          'food',
-                          'Wears',
-                          'Things',
-                          'Services',
-                          'Others',
+                          'groceries',
+                          'restaurants',
+                          'shop',
+                          'others',
                         )),
+                          
         'status'=> $faker->boolean(),
     ];
 });
