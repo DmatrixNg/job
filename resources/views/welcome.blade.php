@@ -109,7 +109,7 @@
               </div>
               <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30" style="padding:30px">
                 <form class="input-group text-center" action="search">
-                  <input class="form-control" type="text" placeholder="Search..">
+                  <input class="form-control" type="text" name="q" placeholder="Search..">
                   <div class="input-group-append">
                     <button type="submit" class="input-group-text"><i class="ti-search"></i></button>
                   </div>

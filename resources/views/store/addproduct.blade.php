@@ -74,7 +74,7 @@
 
                              <input class="form-control" name='product_type' list="product_type"  value='<?php if(isset($error)){ echo $_POST['product_type'];}?>'>
                      <datalist id="product_type">
-                       <option value="food">
+                       <option value="Food">
                        <option value="Wears">
                        <option value="Things">
                        <option value="Services">

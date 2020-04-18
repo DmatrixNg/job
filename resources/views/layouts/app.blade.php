@@ -165,5 +165,104 @@
 
       }
     </script>
+    <script>
+    $.ajax({
+      url: "products?search=@if(request()->has('q')){{request()->q}}@endif",
+      method: "Get",
+      beforeSend: function() {
+        $('.load-more').show();
+      }
+    })
+    .then(
+      function(data) {
+        //console.log(data);
+        $('#movie_list').html(data);
+        $('.load-more').hide();
+        const link = document.querySelector('[rel = next]');
+
+        // console.log(link);
+        if (link == null) {
+          $(".pagi").hide();
+        }
+      });
+
+
+        let tag = $(".list-unstyled p input.tags");
+        for (i = 0; i < tag.length; i++) {
+
+          $(tag[i]).on("click", function () {
+
+            tag = $(this).val();
+            $(this).attr("checked", !$(this).attr("checked"))
+            if ($(this).attr("checked") == 'checked') {
+              var tags = new Array();
+              $(".list-unstyled p input[checked=checked]").each(function() {
+                tags.push($(this).val());
+              });
+              // $("input:checked").each(function() {
+              //    data['myCheckboxes[]'].push($(this).val());
+              // });
+              // console.log(tags);
+
+              $.ajax({
+                url: "products?product_type="+tags,
+                method: "Get",
+                beforeSend: function() {
+                  $('.load-more').show();
+                }
+              })
+              .then(
+              function(data) {
+                // console.log(data);
+                $('#movie_list').html(data);
+                $('.load-more').hide();
+              });
+            }
+          });
+        }
+      </script>
+      <script>
+
+        function getMovies(url) {
+          $.ajax({
+            url: url,
+            beforeSend: function() {
+              $('.load-more').show();
+              $('#pagination').remove();
+            },
+          }).done(function(data) {
+            $('.load-more').hide();
+            $('#movie_list').html(data);
+            $('#movie_list').focus();
+            const link = document.querySelector('[rel = next]');
+
+            // console.log(link);
+            if (link == null) {
+              $(".pagi").hide();
+            }
+          }).fail(function() {
+            alert('Movies could not be loaded.');
+          });
+        }
+        $("#next").click(function() {
+
+          const link = document.querySelector('[rel = next]');
+
+          // console.log(link);
+          if (link !== null) {
+            const url = link.href;
+            getMovies(url);
+          }
+        });
+        $("#previous").click(function() {
+
+          const link = document.querySelector('[rel = prev]');
+          // console.log(link);
+          if (link !== null) {
+            const url = link.href;
+            getMovies(url);
+          }
+        });
+      </script>
 </body>
 </html>

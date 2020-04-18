@@ -16,46 +16,15 @@ Route::get('/', function () {
 
     return view('welcome');
 });
-Route::get('/test', function () {
-// dd(\App\Vendor::where("type",'restaurants')->get());
-// $interns = new \ParseCsv\Csv();
-//       $interns->parse(storage_path('dummy-data.csv'));
-// dd($interns);
-// $shop = json_decode(
-//   file_get_contents(storage_path('product_grid.js')),
-//   true
-// );
-// // dd($shop['CO']);
-// collect($shop['CO'])->each(function ($content) {
-//   $vendor = \App\Vendor::first();
-//   dd($vendor->id);
-//   $product = \App\Product::create(
-//
-  // );
-  $category = factory(\App\Product::class)->make();
-  dd($category );
+Route::get('/search', function () {
 
-      //   $userdata = explode(",", $content['content']['$t']);
-      //   $user = str_ireplace(
-      //     ['fullname: ', 'slackusername:', 'track: ', 'emailaddress: ', ' '],
-      //     ['', '', '', '', ''],
-      //     $userdata
-      //   );
-      //     DB::table('users')->insert([
-      //         'fullname' => $user[0] ?? '',
-      //         'username' => \Illuminate\Support\Str::replaceFirst('@', '',$user[1]) ?? '',
-      //         'track' => $user[2] ?? '',
-      //         'email' => $user[3],
-      //         'hngSet' => 'hng6',
-      //         'password' => bcrypt($user[3].'hng6'),
-      //         'created_at' => Carbon\Carbon::parse($content['updated']['$t']) ?? '',
-      //         ]);
-      // });
-
-    // return view('welcome');
+ return view('search');
 });
+Route::get('products', function () {
+  $product = \App\Product::listproducts()->simplePaginate(20);;
 
-
+  return view('layouts.productList',['products' =>$product]);
+});
 
 Auth::routes();
 Route::get('/track_delivery', function () {

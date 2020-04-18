@@ -23,8 +23,10 @@ class ProductController extends Controller
 
     public function index()
     {
-      // dd(Product::all()->vendor());
-      // dd(Vendor::where('name', request()->business)->first('id')->id);
+      $product = Product::listproducts()->simplePaginate(20);;
+
+      return view('layouts.productList',['products' =>$product]);
+
     }
 
     /**

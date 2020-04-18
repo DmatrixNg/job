@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pipeline\Pipeline;
 
 class Product extends Model
 {
@@ -13,7 +14,17 @@ class Product extends Model
 ];
 
 protected $with = ['vendor'];
-
+public static function listproducts()
+{
+  return $movies = app(Pipeline::class)
+  ->send(Product::query()
+  )
+  ->through([
+    \App\ProductFilters\ProductType::class,
+    \App\ProductFilters\Search::class,
+  ])->thenReturn();
+   // ->simplePaginate(20);
+}
 public function vendor()
      {
          return $this->belongsTo('App\Vendor','id');
