@@ -37,11 +37,11 @@
   <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
     <div class="card featured-item">
       <div class="card-body ptb-45">
-        <div class="icon circle-icon mb-30 mx-auto">
+        <!-- <div class="icon circle-icon mb-30 mx-auto"> -->
           <img src="{{$product->product_pic}}"/>
-        </div>
+        <!-- </div> -->
         <h5>{{$product->product_name}}</h5>
-        <p class="mb-20">{{$store->des}}</p>
+        <p class="mb-20">{{$product->des}}</p>
         <p class="mb-20">{{$product->product_type}}</p>
         <p class="mb-20">N{{$product->product_price}}</p>
         <?php $cart = array(
@@ -65,61 +65,5 @@
 </div>
 </div>
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
-const a = jQuery.noConflict();
-
-function AddCart(store, p_id, action) {
-
-  url = "{{ url('/add_cart')}}";
-  //  id=id+"&act="+action;
-  a.ajax({
-    url: url,
-    type: "Get",
-    data: {
-      store: store,
-      product: p_id,
-      action: action
-    },
-    dataType: "json",
-    beforeSend: function() {
-      let intcount = a('#count').attr('cart');
-      // console.log(a('#like'+id+" button").attr('onclick','like(0,10)'));
-      if (action == 1) {
-        let count = ++intcount;
-        a('#count').html(count);
-        a('#count').attr('cart', count);
-        // console.log(a('#product-' + p_id));
-        a('#product-' + p_id).toggleClass('btn-danger');
-
-        a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',0)');
-        a('#product-' + p_id).html('Remove Item');
-      }
-      if (action == 0) {
-        let count = --intcount;
-        a('#count').html(count);
-        if (count==0) {
-          a('#count').html('');
-        }
-        a('#count').attr('cart', count);
-        a('#product-' + p_id).removeClass('btn-danger');
-        a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',1)');
-        a('#product-' + p_id).html('Add to Cart');
-      }
-    },
-
-  })
-  .then(
-    function(data) {
-
-      console.log(data);
-      // a('#like' + id).html(data.button);
-      // a('#lcount'+id).html(data.count);
-      // a('#lcount'+id).toggleClass('active');
-
-    });
-
-  }
-</script>
 @endsection

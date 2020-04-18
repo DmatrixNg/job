@@ -127,12 +127,12 @@
             </div>
           </div>
           <div class="row text-center">
-            @foreach(\App\Vendor::all() as $store)
+            @foreach(\App\Vendor::where('logo','!=','')->orWhere('logo','!=',null)->get()->take(4) as $store)
             <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
               <div class="card featured-item">
                 <div class="card-body ptb-45">
                   <div class="icon circle-icon mb-30 mx-auto">
-                    <i class="ti-shield"></i>
+                    <img src="{{\Illuminate\Support\Str::replaceFirst('/Users/DMatrix/work/job/job/public/', '',$store->logo)}}" alt="">
                   </div>
                   <h5>{{$store->name}}</h5>
                   <p class="mb-20">{{$store->des}}</p>
@@ -171,16 +171,33 @@
             </div>
           </div>
           <div class="row text-center">
-            @foreach(\App\Product::all() as $product)
+            @foreach(\App\Product::all()->take(8) as $prod)
+
+            <?php
+            $cart = [];
+            $cart = array(
+              "store" => $prod->vendorId,
+       "product" => $prod->id,
+       "action" => "1");
+    // dd(in_array($cart, json_decode(\Cookie::get('cart'), true)));
+       ?>
             <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
               <div class="card featured-item">
                 <div class="card-body ptb-45">
-                  <div class="icon circle-icon mb-30 mx-auto">
-                    <i class="ti-shield"></i>
-                  </div>
-                  <h5>{{$product->name}}</h5>
-                  <p class="mb-20">{{$product->des}}</p>
-                  <a class="item-link link-btn" href="{{url('/stores')}}/p/{{$store->slug}}">Enter Shop</a>
+                  <!-- <div class="icon circle-icon mb-30 mx-auto"> -->
+                    <img src="{{$prod->product_pic}}"/>
+                  <!-- </div> -->
+                  <h5>{{$prod->product_name}}</h5>
+                  <p class="mb-20">{{$prod->product_desc}}</p>
+                  <p class="mb-20">{{$prod->product_type}}</p>
+                  <p class="mb-20">N{{$prod->product_price}}</p>
+
+                @if(json_decode(\Cookie::get('cart'), true)
+                && in_array($cart, json_decode(\Cookie::get('cart'), true)))
+                <button id="product-{{$prod->id}}" class="item-link link-btn btn-danger" onclick="AddCart({{ $prod->vendorId }},{{$prod->id}},0)">Remove Item</a>
+                @else
+                  <button id="product-{{$prod->id}}" class="item-link link-btn" onclick="AddCart({{ $prod->vendorId }},{{$prod->id}},1)">Add to Cart</a>
+                    @endif
                 </div>
               </div>
             </div>
@@ -219,7 +236,7 @@
                   <div class="card featured-item">
                     <div class="card-body ptb-45">
                       <div class="icon circle-icon mb-30 mx-auto">
-                        <i class="ti-shield"></i>
+                        <img src="{{\Illuminate\Support\Str::replaceFirst('/Users/DMatrix/work/job/job/public/', '',$store->logo)}}" alt="">
                       </div>
                       <h5>{{$store->name}}</h5>
                       <p class="mb-20">{{$store->des}}</p>
@@ -263,5 +280,62 @@
       <script src="{{asset('assets/js/popper.min.js')}}"></script>
       <script src="{{asset('assets/js/plugins.js')}}"></script>
       <script src="{{asset('assets/js/main.js')}}"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <script>
+      const a = jQuery.noConflict();
+
+      function AddCart(store, p_id, action) {
+
+        url = "{{ url('/add_cart')}}";
+        //  id=id+"&act="+action;
+        a.ajax({
+          url: url,
+          type: "Get",
+          data: {
+            store: store,
+            product: p_id,
+            action: action
+          },
+          dataType: "json",
+          beforeSend: function() {
+            let intcount = a('#count').attr('cart');
+            // console.log(a('#like'+id+" button").attr('onclick','like(0,10)'));
+            if (action == 1) {
+              let count = ++intcount;
+              a('#count').html(count);
+              a('#count').attr('cart', count);
+              // console.log(a('#product-' + p_id));
+              a('#product-' + p_id).toggleClass('btn-danger');
+
+              a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',0)');
+              a('#product-' + p_id).html('Remove Item');
+            }
+            if (action == 0) {
+              let count = --intcount;
+              a('#count').html(count);
+              if (count==0) {
+                a('#count').html('');
+              }
+              a('#count').attr('cart', count);
+              a('#product-' + p_id).removeClass('btn-danger');
+              a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',1)');
+              a('#product-' + p_id).html('Add to Cart');
+            }
+          },
+
+        })
+        .then(
+          function(data) {
+
+            console.log(data);
+            // a('#like' + id).html(data.button);
+            // a('#lcount'+id).html(data.count);
+            // a('#lcount'+id).toggleClass('active');
+
+          });
+
+        }
+      </script>
     </body>
 </html>

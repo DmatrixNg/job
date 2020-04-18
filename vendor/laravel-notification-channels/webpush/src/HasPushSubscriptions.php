@@ -11,7 +11,6 @@ trait HasPushSubscriptions
      */
     public function pushSubscriptions()
     {
-      
         return $this->morphMany(config('webpush.model'), 'subscribable');
     }
 

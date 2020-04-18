@@ -109,5 +109,61 @@
     <script src="{{asset('assets/js/popper.min.js')}}"></script>
     <script src="{{asset('assets/js/plugins.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
+
+    <script>
+    const a = jQuery.noConflict();
+
+    function AddCart(store, p_id, action) {
+
+      url = "{{ url('/add_cart')}}";
+      //  id=id+"&act="+action;
+      a.ajax({
+        url: url,
+        type: "Get",
+        data: {
+          store: store,
+          product: p_id,
+          action: action
+        },
+        dataType: "json",
+        beforeSend: function() {
+          let intcount = a('#count').attr('cart');
+          // console.log(a('#like'+id+" button").attr('onclick','like(0,10)'));
+          if (action == 1) {
+            let count = ++intcount;
+            a('#count').html(count);
+            a('#count').attr('cart', count);
+            // console.log(a('#product-' + p_id));
+            a('#product-' + p_id).toggleClass('btn-danger');
+
+            a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',0)');
+            a('#product-' + p_id).html('Remove Item');
+          }
+          if (action == 0) {
+            let count = --intcount;
+            a('#count').html(count);
+            if (count==0) {
+              a('#count').html('');
+            }
+            a('#count').attr('cart', count);
+            a('#product-' + p_id).removeClass('btn-danger');
+            a('#product-' + p_id).attr('onclick', 'AddCart('+store+','+p_id +',1)');
+            a('#product-' + p_id).html('Add to Cart');
+          }
+        },
+
+      })
+      .then(
+        function(data) {
+
+          console.log(data);
+          // a('#like' + id).html(data.button);
+          // a('#lcount'+id).html(data.count);
+          // a('#lcount'+id).toggleClass('active');
+
+        });
+
+      }
+    </script>
 </body>
 </html>

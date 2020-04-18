@@ -22,7 +22,7 @@ class VendorController extends Controller
     public function index()
     {
       $stores = Vendor::where('userId',request()->user()->id)->get();
-
+// dd($stores);
         return view('store.dashboard', ['stores' => $stores]);
     }
 

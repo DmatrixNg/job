@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "bheller/images-generator": "^1.0",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.5",
         "intervention/imagecache": "^2.4",
@@ -16,6 +17,7 @@
         "laravel/framework": "^6.2",
         "laravel/socialite": "^4.3",
         "laravel/tinker": "^2.0",
+        "parsecsv/php-parsecsv": "^1.1",
         "silviolleite/laravelpwa": "^1.0",
         "socialiteproviders/google": "^3.0"
     },

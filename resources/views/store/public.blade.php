@@ -30,15 +30,15 @@
         </div>
       </div>
     </div>
+    <a href="/store" class="btn bg-primary"> Create store </a>
+    <br>
     <div class="row text-center">
-<a href="/store" class="btn bg-primary"> Create store </a>
-<br>
           @foreach($stores as $store)
           <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
             <div class="card featured-item">
               <div class="card-body ptb-45">
                 <div class="icon circle-icon mb-30 mx-auto">
-                  <i class="ti-shield"></i>
+                  <img src="{{\Illuminate\Support\Str::replaceFirst('/Users/DMatrix/work/job/job/public/', '',$store->logo)}}" alt="">
                 </div>
                 <h5>{{$store->name}}</h5>
                 <p class="mb-20">{{$store->des}}</p>
