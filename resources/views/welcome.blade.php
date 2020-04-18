@@ -236,7 +236,7 @@
                   <div class="card featured-item">
                     <div class="card-body ptb-45">
                       <div class="icon circle-icon mb-30 mx-auto">
-                        <img src="{{\Illuminate\Support\Str::replaceFirst('/Users/DMatrix/work/job/job/public/', '',$store->logo)}}" alt="">
+                        <img src="{{\Illuminate\Support\Str::replaceFirst('/home/codtufbi/job.codtrix.com/job/public/', '',$store->logo)}}" alt="">
                       </div>
                       <h5>{{$store->name}}</h5>
                       <p class="mb-20">{{$store->des}}</p>
