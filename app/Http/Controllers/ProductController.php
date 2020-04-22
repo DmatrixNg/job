@@ -56,29 +56,29 @@ class ProductController extends Controller
     // 'product_pic' => 'required|image',
 ]);
 // dd($validator);
-//         $fullPath ='';
-//         if(!is_null($request->file('product_pic')) && $request->file('product_pic') !== ""){
-//
-//     $filenamewithextension = $request->file('product_pic')->getClientOriginalName();
-//
-//     //get filename without extension
-//     $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-//
-//     //get file extension
-//     $extension = $request->file('product_pic')->getClientOriginalExtension();
-//
-//     $image = $request->file('product_pic');
-//     // dd($filename);
-//     $images = new Images;
-//     $fullPath = $images->store($image, $filenamewithextension,$filename,$extension);
-// }
+        $fullPath ='';
+        if(!is_null($request->file('product_pic')) && $request->file('product_pic') !== ""){
+
+    $filenamewithextension = $request->file('product_pic')->getClientOriginalName();
+
+    //get filename without extension
+    $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+    //get file extension
+    $extension = $request->file('product_pic')->getClientOriginalExtension();
+
+    $image = $request->file('product_pic');
+    // dd($filename);
+    $images = new Images;
+    $fullPath = $images->store($image, $filenamewithextension,$filename,$extension);
+}
   // dd($fullPath);
       $product = array(
 
         'vendorId' => $request->vendorId,
         'product_name' => $request->product_name,
         'productSlug' => Str::slug($request->product_name),
-        // 'product_pic' => $fullPath,
+        'product_pic' => $fullPath,
         'product_price' => $request->product_price,
         'product_desc' => $request->product_desc,
         'product_full_desc' => $request->product_full_desc,
@@ -88,7 +88,7 @@ class ProductController extends Controller
       );
      Product::create($product);
      $store = Vendor::where('id', request()->vendorId)->first('slug')->slug;
-        return redirect('store/'.$store)->with('message', 'Added Successfully');
+        return redirect('admin/store/'.$store)->with('message', 'Added Successfully');
     }
 
     /**

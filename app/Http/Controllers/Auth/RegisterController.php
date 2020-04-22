@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Auth;
+use App\UserSetting;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -31,11 +33,22 @@ class RegisterController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    protected function redirectTo()
+    {
+      if (auth()->user()->setting->type == 'administrator') {
+        return '/admin';
+      }
+      if (auth()->user()->setting->type == 'dispatcher') {
+        return '/dispatcher';
+      }
+      return '/home';
+    }
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -66,12 +79,45 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+      // dd($data['role']);
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'age' => $data['age'],
             'address' => $data['address'],
             'password' => Hash::make($data['password']),
         ]);
+        if (isset($data['role'])) {
+            $setting = array(
+              'userId' => $user->id,
+              'type' => 'administrator',
+              'privilages' => $data['role'],
+              'status' => 'active',
+            );
+          $setting = $this->settings($setting);
+          if ($setting) {
+            return $user;
+          }
+
+        }
+        else {
+
+          $setting = array(
+            'userId' => $user->id,
+            'type' => 'guest',
+            'privilages' => "buyers",
+            'status' => 'active',
+          );
+        $setting = $this->settings($setting);
+        if ($setting) {
+          return $user;
+        }
+
+        }
+        return $user;
+    }
+    public function settings($setting)
+    {
+        return UserSetting::create($setting);
     }
 }

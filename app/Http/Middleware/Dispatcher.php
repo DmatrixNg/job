@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class SchoolMiddleware
+class Dispatcher
 {
     /**
      * Handle an incoming request.
@@ -13,8 +13,14 @@ class SchoolMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+
+    
     public function handle($request, Closure $next)
     {
+      if ($request->user()->setting->privilages !== 'dispatcher') {
+
+        return redirect('/');
+    }
         return $next($request);
     }
 }

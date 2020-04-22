@@ -44,7 +44,7 @@
     </div>
     <div class="row text-center">
 <div class="col-12">
-<a href="/d/requests" class="btn bg-primary"> View open deliverable Items for Admins Only (for test) </a>
+<a href="/my_orders" class="btn bg-primary"> View Your Order</a>
   <?php
   $status = \App\Request::where('pickup_code', request()->track)->first();
   // dump($status->status);

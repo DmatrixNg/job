@@ -122,6 +122,11 @@ class TransactionController extends Controller
     }
     public function test(Request $request, Order $order)
     {
+      $order->where('id', $request->id)
+      ->update([
+        'pay_status' => 'paid'
+
+      ]);
       $orderIni = $order->where('id', $request->id)->first();
       // dd($order->pickup_code);
     $cookie = \Cookie::forget('cart');

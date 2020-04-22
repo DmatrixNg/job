@@ -25,4 +25,8 @@ public function user()
          {
              return $this->hasMany('App\Request', 'requestId');
          }
+     public function responds()
+         {
+             return $this->hasMany('App\Responds', 'orderId');
+         }
 }

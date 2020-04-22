@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', "Stores dashboard")
+@section('title', "Admin dashboard")
 @section('content')
 <style>
     html, body {
@@ -54,28 +54,45 @@
     }
 </style>
 <div class="header-space"></div>
-<nav class="breadcrumb-area bg-dark bg-6 ptb-70">
-  <div class="container d-md-flex">
-    <h2 class="text-white mb-0">Product page</h2>
-    <ol class="breadcrumb p-0 m-0 bg-dark ml-auto">
-      <li class="breadcrumb-item"><a href="/">Home</a> <span class="text-white">/</span></li>
-      <li class="breadcrumb-item"><a href="{{url('/store')}}">Store</a> <span class="text-white">/</span></li>
-      <li aria-current="page" class="breadcrumb-item active"></li>
-    </ol>
-  </div>
-</nav>
+
 
  <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Hi! {{request()->user()->name}} <br>Welcome to Your Stores</h1>
       <p class="lead"></p>
-
     </div>
   </div>
 
-      <!-- Featured Section Start -->
-      <section class="pt-4 bg-white">
-        <div class="container">
+  <!-- Featured Section Start -->
+  <section class="pt-4 bg-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <div class="heading mb-50">
+
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-buyers-tab" data-toggle="pill" href="#pills-buyers" role="tab" aria-controls="pills-dispatcher" aria-selected="false">Buyers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-orders-tab" data-toggle="pill" href="#pills-orders" role="tab" aria-controls="pills-orders" aria-selected="false">orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-dispatcher-tab" data-toggle="pill" href="#pills-dispatcher" role="tab" aria-controls="pills-dispatcher" aria-selected="false">Dispatcher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-admins-tab" data-toggle="pill" href="#pills-admins" role="tab" aria-controls="pills-admins" aria-selected="false">Administrators</a>
+        </li>
+      </ul>
+        </div>
+        </div>
+    </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
           <div class="row text-center">
             <div class="col-12" data-aos="zoom-in">
 
@@ -84,8 +101,10 @@
                 <hr class="line bw-2 mx-auto line-sm mb-5">
                 <hr class="line bw-2 mx-auto">
               </div>
-            </div>
+            <a href="/admin/create" class="btn bg-primary"> Create store </a>
           </div>
+          </div>
+
           <div class="row text-center">
             @foreach($stores as $store)
             <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
@@ -96,27 +115,174 @@
                   </div>
                   <h5>{{$store->name}}</h5>
                   <p class="mb-20">{{$store->des}}</p>
-                  <a class="item-link link-btn"  href="{{url('/store')}}/{{$store->slug}}">{{$store->name}}</a>
+                  <a class="item-link link-btn"  href="{{url('/admin/store')}}/{{$store->slug}}">Enter {{$store->name}}</a>
 
                 </div>
               </div>
             </div>
-            <!-- Single Featured End -->
+
             @endforeach
-            <!-- <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in" data-aos-delay="400">
-              <div class="card featured-item">
-                <div class="card-body ptb-45">
-                  <div class="icon circle-icon mb-30 mx-auto">
-                    <i class="ti-lock"></i>
-                  </div>
-                  <h5>Security included</h5>
-                  <p class="mb-20">Cicero are also reproduc heir exact original form, accompanied pani da</p>
-                  <a class="item-link link-btn" href="#">Read More</a>
-                </div>
-              </div>
-            </div> -->
 
           </div>
+
         </div>
-      </section>
+        <div class="tab-pane fade" id="pills-buyers" role="tabpanel" aria-labelledby="pills-buyers-tab">
+          <div class="row container">
+            <div class="col-12 col-md-6 col-lg-8 mb-sm-30 mb-md-30">
+
+
+          <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Numbers of orders</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <?php $i=1 ?>
+    @foreach($buyers as $buyer)
+    <tr>
+      <th scope="row">{{$i++}}</th>
+      <td>{{$buyer->name}}</td>
+      <td>{{$buyer->orders->count()}}</td>
+
+    </tr>
+    @endforeach
+
+  </tbody>
+</table>
+
+</div>
+<div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+<h1>Total User: {{$buyers->count()}}</h1>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="pills-orders" role="tabpanel" aria-labelledby="pills-orders-tab">
+
+          <div class="col-12 col-md-6 col-lg-6 mb-sm-30 mb-md-30">
+
+                      <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Order</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Pay status</th>
+                  <th scope="col">Pickup code</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <?php $i=1 ?>
+                @foreach($orders as $order)
+                <tr>
+                  <th scope="row">{{$i++}}</th>
+                  <td>
+                    @php
+                      $products = unserialize($order->order);
+                    //  dd($products);
+                    @endphp
+                    @foreach($products as $product)
+                    @php
+                  $item = \App\Product::firstWhere('id',$product['product_id']);
+                  //dd($product->product_name);
+
+                    @endphp
+                    <span>
+                    Product Name:  {{$item->product_name}}:
+                    </span>
+                    <span>
+                    Product Cost:  N{{$product['product_cost']}}
+                    </span>
+                    <br>
+                    @endforeach
+                  </td>
+                  <td>{{$order->type}}</td>
+                  <td>{{$order->location}}</td>
+                  <td>N{{$order->cost}}</td>
+                  <td>{{$order->pay_status}}</td>
+                  <td>{{$order->pickup_code}}</td>
+                </tr>
+                @endforeach
+
+              </tbody>
+            </table>
+        </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+        </div>
+
+        </div>
+
+
+
+        <!-- ///////////////////////////// -->
+        <div class="tab-pane fade" id="pills-dispatcher" role="tabpanel" aria-labelledby="pills-dispatcher-tab">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+            <table class="table">
+            <thead class="thead-light">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Request handled</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $i=1 ?>
+            @foreach($dispatchers as $dispatcher)
+            <tr>
+            <th scope="row">{{$i++}}</th>
+            <td>{{$dispatcher->name}}</td>
+            <td>{{$dispatcher->responds->count()}}</td>
+            <td>@mdo</td>
+            </tr>
+            @endforeach
+
+            </tbody>
+            </table>
+        </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+        </div>
+
+        </div>
+        <!-- ///////////////////////////// -->
+        <div class="tab-pane fade" id="pills-admins" role="tabpanel" aria-labelledby="pills-admins-tab">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+            <table class="table">
+            <thead class="thead-light">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Request handled</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $i=1 ?>
+            @foreach($admins as $admin)
+            <tr>
+            <th scope="row">{{$i++}}</th>
+            <td>{{$admin->name}}</td>
+            <td>@mdo</td>
+            </tr>
+            @endforeach
+
+            </tbody>
+            </table>
+        </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-sm-30 mb-md-30">
+        </div>
+
+        </div>
+
+      </div>
+</div>
+</section>
 @endsection

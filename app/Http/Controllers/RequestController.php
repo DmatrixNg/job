@@ -123,7 +123,7 @@ class RequestController extends Controller
         // dd($data);
         Respond::create($data);
       }
-   return redirect("pickups");
+   return redirect("/dispatcher/pickups");
     }
 
     public function ready(Request $request, Order $order)

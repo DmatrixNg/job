@@ -26,6 +26,28 @@ Route::get('products', function () {
   return view('layouts.productList',['products' =>$product]);
 });
 
+Route::prefix('admin')->group(function () {
+
+  // Route::get('/', function () {
+  //       if (Auth::user()) {
+  //
+  //         return view('welcome');
+  //       }else {
+  //         return redirect('/admin/login');
+  //       }
+  // });
+  Route::get('/login', function () {
+
+        return view('admin.login');
+  })->name('admin_login');
+
+  Route::get('/register', function () {
+
+        return view('admin.register');
+  });
+
+
+});
 Auth::routes();
 Route::get('/track_delivery', function () {
     return view('store.track_delivery');
@@ -54,8 +76,7 @@ Route::get('/done', 'RequestController@done');
 Route::get('/cancel', 'RequestController@cancel');
 Route::get('/ready', 'RequestController@ready');
 Route::get('/decline', 'RequestController@decline');
-Route::get('/pickups', 'RespondController@index');
-
+Route::get('/my_orders', 'OrderController@user');
 
 Route::get('help_desk', 'ReviewController@index');
 Route::post('contact', 'ReviewController@store')->name('contact');
@@ -78,15 +99,29 @@ Route::prefix('pay')->group(function () {
 
 });
 
-Route::prefix('store')->group(function () {
-  Route::get('/', 'VendorController@create');
-  Route::get('dashboard', 'VendorController@index');
+Route::prefix('admin')->group(function () {
+
+  Route::get('/create', 'VendorController@create');
+  Route::get('/', 'AdminController@index');
   Route::post('addvendor', 'VendorController@store')->name('addvendor');
-  Route::get('{store}/addproduct', 'ProductController@create');
+  Route::get('store/{store}/addproduct', 'ProductController@create');
   Route::get('delete/{item}', 'ProductController@destroy');
-  Route::get('{store}', 'VendorController@show');
+  Route::get('store/{store}', 'VendorController@show');
   Route::post('addproduct', 'ProductController@store')->name('addproduct');
 });
+
+Route::prefix('dispatcher')->group(function () {
+
+  Route::get('/requests', 'RequestController@show');
+  Route::get('/pickups', 'RespondController@index');
+
+  Route::get('/', 'DispatcherController@index');
+  Route::get('store/{store}/addproduct', 'ProductController@create');
+  Route::get('delete/{item}', 'ProductController@destroy');
+  Route::get('store/{store}', 'VendorController@show');
+  Route::post('addproduct', 'ProductController@store')->name('addproduct');
+});
+
 Route::prefix('stores')->group(function () {
 Route::get('/', function () {
  $stores = \App\Vendor::all();
@@ -138,7 +173,19 @@ if ($oldcookie) {
 }
 }
 });
+Route::get('/fix', function () {
+$users = \App\User::all();
+ foreach ($users as $user) {
 
+             $setting = array(
+               'userId' => $user->id,
+               'type' => 'guest',
+               'privilages' => "buyers",
+               'status' => 'active',
+             );
+             App\UserSetting::create($setting);
+ }
+});
 
 Route::get('/read_cart', function () {
  // dd(request()->all());
@@ -147,6 +194,3 @@ Route::get('/read_cart', function () {
  return $cart;
 
 });
-  Route::get('/d/requests', 'RequestController@show');
-
-  Route::get('/{username}/orders', 'OrderController@user');

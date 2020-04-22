@@ -76,7 +76,7 @@ class VendorController extends Controller
           'type'      =>$request->type,
         ]
         );
-        return redirect('store/'.Str::slug($request->name))->with('added', 'Successfull');
+        return redirect('admin/store/'.Str::slug($request->name))->with('added', 'Successfull');
     }
 
     /**

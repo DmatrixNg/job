@@ -41,7 +41,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
+
 
     public function business()
       {
@@ -51,5 +51,14 @@ class User extends Authenticatable
         {
             return $this->hasMany('App\Order', 'userId');
         }
+      public function setting()
+        {
+            return $this->hasOne('App\UserSetting', 'userId');
+        }
+      public function responds()
+        {
+            return $this->hasMany('App\Respond', 'userId');
+        }
+      
 
 }

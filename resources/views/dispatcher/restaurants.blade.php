@@ -24,20 +24,20 @@
         </div>
       </div>
         <div class="heading mb-50">
-          <h2>Stores</h2>
+          <h2>All Restaurants</h2>
           <hr class="line bw-2 mx-auto line-sm mb-5">
           <hr class="line bw-2 mx-auto">
         </div>
       </div>
     </div>
-    
     <div class="row text-center">
+
           @foreach($stores as $store)
           <div class="col-12 col-md-6 col-lg-3 mb-sm-30 mb-md-30" data-aos="zoom-in">
             <div class="card featured-item">
               <div class="card-body ptb-45">
                 <div class="icon circle-icon mb-30 mx-auto">
-                  <img src="{{\Illuminate\Support\Str::replaceFirst('/home/codtufbi/job.codtrix.com/job/public/', '',$store->logo)}}" alt="">
+                  <i class="ti-shield"></i>
                 </div>
                 <h5>{{$store->name}}</h5>
                 <p class="mb-20">{{$store->des}}</p>

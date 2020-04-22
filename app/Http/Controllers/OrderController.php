@@ -149,6 +149,7 @@ class OrderController extends Controller
 
     public function paySuccess(Request $request, Order $order)
     {
+
       $order->where('id', $request->id)
       ->update([
         'pay_status' => 'paid'
