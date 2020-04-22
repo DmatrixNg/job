@@ -27,12 +27,12 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('admin', function ($user) {
 
-          dump($user->setting);
-            // return $user->setting->privilages === 'admin';
+          // dump($user);
+            return \App\UserSetting::where('userId',auth()->user()->id)->first()->privilages === 'admin';
 
       });
         Gate::define('dispatcher', function ($user) {
-          // return $user->setting->privilages === 'dispatcher';
+          return \App\UserSetting::where('userId',auth()->user()->id)->first()->privilages === 'dispatcher';
       });
     }
 }

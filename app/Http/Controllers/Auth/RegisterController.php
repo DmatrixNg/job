@@ -35,10 +35,11 @@ class RegisterController extends Controller
 
     protected function redirectTo()
     {
-      if (auth()->user()->setting->type == 'administrator') {
+      dd(\App\UserSetting::where('userId',auth()->user()->id)->first()->type);
+      if (\App\UserSetting::where('userId',auth()->user()->id)->first()->type == 'administrator') {
         return '/admin';
       }
-      if (auth()->user()->setting->type == 'dispatcher') {
+      if (\App\UserSetting::where('userId',auth()->user()->id)->first()->type == 'dispatcher') {
         return '/dispatcher';
       }
       return '/home';
