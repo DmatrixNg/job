@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', "Admin Registration")
 
 @section('content')
 <div class="header-space"></div>
