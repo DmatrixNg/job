@@ -27,6 +27,7 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('admin', function ($user) {
 
+          dump($user->setting);
             return $user->setting->privilages === 'admin';
 
       });
