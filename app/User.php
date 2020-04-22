@@ -53,12 +53,12 @@ class User extends Authenticatable
         }
       public function setting()
         {
-            return $this->hasOne('App\UserSetting', 'userId');
+            return $this->hasOne('App\UserSetting','userId', 'id');
         }
       public function responds()
         {
             return $this->hasMany('App\Respond', 'userId');
         }
-      
+
 
 }
