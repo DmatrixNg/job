@@ -12,4 +12,9 @@ class UserSetting extends Model
 'privilages',
 'status',
   ];
+
+  public function user()
+       {
+           return $this->belongsTo('App\User','id');
+       }
 }

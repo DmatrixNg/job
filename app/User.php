@@ -53,7 +53,7 @@ class User extends Authenticatable
         }
       public function setting()
         {
-            return $this->hasOne('App\UserSetting','userId', 'id');
+            return $this->hasOne('App\UserSetting', 'userId');
         }
       public function responds()
         {
