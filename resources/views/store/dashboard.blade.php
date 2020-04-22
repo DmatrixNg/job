@@ -194,7 +194,7 @@
                   $item = \App\Product::firstWhere('id',$product['product_id']);
                   //dd($item->product_name);
                   @endphp
-                  @if(!is_null($item->product_name))
+                  @if(!is_null($item))
 
                     <span>
                     Product Name:  {{$item->product_name}}:
