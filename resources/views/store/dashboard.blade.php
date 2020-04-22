@@ -187,7 +187,7 @@
                   <td>
                     @php
                       $products = unserialize($order->order);
-                    //  dd($products);
+                      dd($products);
                     @endphp
                     @foreach($products as $product)
                     @php
