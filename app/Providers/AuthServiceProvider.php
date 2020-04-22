@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
 
       });
         Gate::define('dispatcher', function ($user) {
-          return $user->setting->privilages === 'dispatcher';
+          // return $user->setting->privilages === 'dispatcher';
       });
     }
 }
