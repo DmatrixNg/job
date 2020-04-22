@@ -193,8 +193,9 @@
                     @php
                   $item = \App\Product::firstWhere('id',$product['product_id']);
                   //dd($item->product_name);
+                  @endphp
+                  @if(!is_null($item->product_name))
 
-                    @endphp
                     <span>
                     Product Name:  {{$item->product_name}}:
                     </span>
@@ -202,6 +203,9 @@
                     Product Cost:  N{{$product['product_cost']}}
                     </span>
                     <br>
+                    @else
+
+                    @endif
                     @endforeach
                   </td>
                   <td>{{$order->type}}</td>
