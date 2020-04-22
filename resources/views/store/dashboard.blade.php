@@ -187,12 +187,12 @@
                   <td>
                     @php
                       $products = unserialize($order->order);
-                      dd($products);
+                      //dd($products);
                     @endphp
                     @foreach($products as $product)
                     @php
                   $item = \App\Product::firstWhere('id',$product['product_id']);
-                  //dd($product->product_name);
+                  //dd($item->product_name);
 
                     @endphp
                     <span>
