@@ -67,7 +67,7 @@
                     <a href="{{ url('/dispatcher')}}" class="nav-link">Enter Dashboard</a>
                   </li>
                   @else
-
+                  @auth
                   <li class="nav-item">
                     <a href="{{ url('/stores')}}" class="nav-link">Stores</a>
                   </li>
@@ -91,7 +91,7 @@
                     <a href="{{ url('/checkout')}}" class="nav-link">
                     <img width="30" src="{{asset('download.png')}}" alt=""><span id="count" cart="@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif" class="badge badge-pill badge-danger">@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif</span> </a>
                   </li>
-
+                  @endauth
                 @endif
 
 
