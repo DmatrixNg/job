@@ -72,6 +72,32 @@
                       <a href="{{ url('/dispatcher')}}" class="nav-link">Enter Dashboard</a>
                     </li>
 
+                    @else
+                    
+                    <li class="nav-item">
+                      <a href="{{ url('/stores')}}" class="nav-link">Stores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ url('/product_categories')}}" class="nav-link">Product categories</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ url('/track_delivery')}}" class="nav-link">Track delivery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ url('/all_groceries')}}" class="nav-link">All groceries</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ url('/restaurants')}}" class="nav-link">Restaurants</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="{{ url('/help_desk')}}" class="nav-link">Help desk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ url('/checkout')}}" class="nav-link">
+                      <img width="30" src="{{asset('download.png')}}" alt=""><span id="count" cart="@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif" class="badge badge-pill badge-danger">@if(json_decode(\Cookie::get('cart'), true)){{count(json_decode(\Cookie::get('cart'), true))}}@endif</span> </a>
+                    </li>
+
                   @endif
 
                 </ul>
