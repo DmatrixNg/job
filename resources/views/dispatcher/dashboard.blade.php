@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', "Admin dashboard")
+@section('title', "Dispatcher dashboard")
 @section('content')
 <style>
     html, body {
@@ -144,6 +144,10 @@
       <h1>{{$id->pickup_code}}</h1>
       <small>Awaiting receiver confirmation</small>
       @endif
+      @if($value->status == "closed")
+      <h3>Package confirmed</h3>
+      <small>You have been paid</small>
+      @endif
       </td>
 
             </tr>
@@ -155,6 +159,14 @@
       </table>
         </div>
 
+</div>
+</div>
+</div>
+<div class="col-md-4">
+  <div class="card">
+      <div class="card-body">
+  <h3> Wallet:</h3>
+  <h4>N{{\Auth::user()->wallet->sum('amount')}}</h4>
 </div>
 </div>
 </div>

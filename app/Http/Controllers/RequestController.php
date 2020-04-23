@@ -175,7 +175,7 @@ if ($ready) {
 
   Respond::where('requestId', $request->id)
   ->update([
-    'status' => 'done'
+    'status' => 'closed'
 
   ]);
   $user = Respond::where('requestId', $request->id)

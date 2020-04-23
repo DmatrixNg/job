@@ -87,7 +87,7 @@
 <a href="#" class="btn btn-success">Successful</a>
 <p>Your Pickup code</p>
 <h1>{{$request->pickup_code}}</h1>
-<a href="{{URL('/')}}/done?id={{$request->id}}" class="btn btn-success">Received Item</a>
+<a href="{{URL('/')}}/done?id={{$request->id}}" class="btn btn-success">Click here, Received Item</a>
 @endif
 </td>
       </tr>

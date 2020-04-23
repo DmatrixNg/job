@@ -59,6 +59,10 @@ class User extends Authenticatable
         {
             return $this->hasMany('App\Respond', 'userId');
         }
+      public function wallet()
+        {
+            return $this->hasMany('App\Wallet', 'userId');
+        }
 
 
 }
