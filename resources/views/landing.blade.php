@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
   <header class="section-header">
 
     <section class="header-top">
@@ -64,7 +65,7 @@
     </section>
     <section class="header-main">
       <div class="container" style="font-size: small;">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-center">
           <div class="col-lg-2 col-sm-3 col-2 ">
             <a href="/" class="brand-wrap">
               <!-- <img class="logo" src="logo.png" alt="logo" width="25" height="25"> -->
@@ -109,7 +110,7 @@
 
           <!-- col.// -->
           <div class="col-lg-4 col-sm-9 col-10 order-2 order-lg-3">
-            <div class="widgets-wrap d-flex justify-content-center">
+            <div class="widgets-wrap d-flex">
               <!-- widget .// -->
               <div class="widget-header pt-3">
                 <div class="text">
@@ -131,7 +132,7 @@
               </div>
 
               <!-- widget  dropdown.// -->
-              <div class="widget-header ml-3">
+              <div class="widget-header pt-1 ml-3">
                 <button href="#" class="btn btn-success" style="    width: 108px;
                 display: inline-flex;
                 padding: 0px 10px 0px 10px;">
@@ -308,12 +309,12 @@
       <div class="container pl-4 pr-4 product-box">
         <div class="card m-3 product">
           <div class="row no-gutters position-relative">
-            <div class="col-md-4 pt-3 pb-3">
+            <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
                 <img src="/img/glasses.png" class="card-img" alt="...">
               </div>
             </div>
-            <div class="col-md-8 pt-3 pb-3">
+            <div class="col-8 pt-3 pb-3">
               <div class="desc">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
@@ -332,12 +333,12 @@
         </div>
         <div class="card m-3 product">
           <div class="row no-gutters position-relative">
-            <div class="col-md-4 pt-3 pb-3">
+            <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
                 <img src="/img/sneakers.png" class="card-img" alt="...">
               </div>
             </div>
-            <div class="col-md-8 pt-3 pb-3">
+            <div class="col-8 pt-3 pb-3">
               <div class="desc">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
@@ -356,12 +357,12 @@
         </div>
         <div class="card m-3 product">
           <div class="row no-gutters position-relative">
-            <div class="col-md-4 pt-3 pb-3">
+            <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
                 <img src="/img/bag.png" class="card-img" alt="...">
               </div>
             </div>
-            <div class="col-md-8 pt-3 pb-3">
+            <div class="col-8 pt-3 pb-3">
               <div class="desc">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
@@ -380,12 +381,12 @@
         </div>
         <div class="card m-3 product">
           <div class="row no-gutters position-relative">
-            <div class="col-md-4 pt-3 pb-3">
+            <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
                 <img src="/img/sneakers.png" class="card-img" alt="...">
               </div>
             </div>
-            <div class="col-md-8 pt-3 pb-3">
+            <div class="col-8 pt-3 pb-3">
               <div class="desc">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
@@ -489,7 +490,7 @@
         <div class="mr-3 ml-2 product-items" style=" background-image: url(/g2.jpg);
         background-position: center;
         background-size: cover;">
-        <span class="bg-danger border p-2 text-light">vegitable</span>
+        <span class="bg-danger border p-2 text-light">Spice</span>
       </div>
     </div>
     <div class="full-snippet">
@@ -825,7 +826,7 @@
   <div class="row w-100 heading ca-head">
     BLOOMZON TV
   </div>
-  <div class="container mx-auto p-5" style="width:500px; height:auto">
+  <div class="container mx-auto" style="width:40%; height:auto">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
     </div>
@@ -840,20 +841,16 @@
 
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
-        <img src="/img/slide1.jpg" class="card-img" height="150 "alt="...">
+        <img src="/food1.jpg" class="card-img" height="150 "alt="...">
         <div class="card-img-overlay text-center vendor-items bg-primary">
           <span class="card-text">Fast food vendor</span>
         </div>
       </div>
-      <!-- <div class="mr-3 ml-3 vendor-items" style=" background-image: url(/img/slide1.jpg);
-        background-position: center;
-        background-size: cover;">
-        <span class="bg-danger border p-2 text-light">vegitable</span>
-      </div> -->
+
     </div>
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
-        <img src="/b3.jpg" class="card-img" height="150 "alt="...">
+        <img src="/g2.jpg" class="card-img" height="150 "alt="...">
         <div class="card-img-overlay text-center vendor-items bg-primary">
           <span class="card-text">Groceries</span>
         </div>
@@ -869,7 +866,7 @@
     </div>
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
-        <img src="/b1.jpg" class="card-img" height="150 "alt="...">
+        <img src="/b1.jpeg" class="card-img" height="150 "alt="...">
         <div class="card-img-overlay text-center vendor-items bg-primary">
           <span class="card-text">Manufacturing</span>
         </div>
