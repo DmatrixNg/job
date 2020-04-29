@@ -256,11 +256,11 @@
           <h4>BRANDS</h4>
         </div>
         <div class="col-6">
-          <div id="brand" class="carousel slide w-100" data-ride="carousel">
+          <div id="brand" class="carousel d-flex slide w-100" data-ride="carousel">
 
-          <span class="h4">
-              <a class="carousel-control-prev" href="#brand" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="h4 pr-3">
+              <a class="" href="#brand" role="button" data-slide="prev">
+              <span class="" aria-hidden="true"><</span>
               <span class="sr-only">Previous</span>
             </a>
           </span>
@@ -273,7 +273,7 @@
           <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
           <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
         </div>
-  <div class="carousel-item active">
+  <div class="carousel-item">
           <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
           <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
           <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
@@ -283,9 +283,9 @@
         </div>
         </div>
 
-          <span class="h4">
-            <a class="carousel-control-next" href="#brand" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="h4 pl-3">
+            <a class="" href="#brand" role="button" data-slide="next">
+            <span class="" aria-hidden="true">></span>
             <span class="sr-only">Next</span>
           </a>
         </span>
@@ -889,6 +889,16 @@
       </div>
     </div>
   </div>
+  <div class="d-flex">
+    <div class="col-7 text-right">
+
+    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+
+  </div>
+  <div class="col-5">
+
   <div class="more text-right mr-4 pr-3">
     <a href="#" class="icontext">
       <div class="text">
@@ -896,6 +906,8 @@
       </div>
     </a>
   </div>
+</div>
+</div>
 </section>
 <footer class="bg-dark text-white text-decoration-none">
   <div class="container" style="font-size: small;">
