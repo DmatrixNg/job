@@ -483,42 +483,42 @@
           <div class="mr-3 ml-2 product-items" style=" background-image: url(/g1.jpeg);
           background-position: center;
           background-size: cover;">
-          <span class="bg-danger border p-2 text-light">Vegitable</span>
+          <span class="btn-danger border p-2 text-light">Vegitable</span>
         </div>
       </div>
       <div class="full-snippet">
         <div class="mr-3 ml-2 product-items" style=" background-image: url(/g2.jpg);
         background-position: center;
         background-size: cover;">
-        <span class="bg-danger border p-2 text-light">Spice</span>
+        <span class="btn-danger border p-2 text-light">Spice</span>
       </div>
     </div>
     <div class="full-snippet">
       <div class="mr-3 ml-2 product-items" style=" background-image: url(/g3.jpg);
       background-position: center;
       background-size: cover;">
-      <span class="bg-danger border p-2 text-light">vegitable</span>
+      <span class="btn-danger border p-2 text-light">vegitable</span>
     </div>
   </div>
   <div class="full-snippet">
     <div class="mr-3 ml-2 product-items" style=" background-image: url(/food2.jpeg);
     background-position: center;
     background-size: cover;">
-    <span class="bg-danger border p-2 text-light">vegitable</span>
+    <span class="btn-danger border p-2 text-light">vegitable</span>
   </div>
 </div>
 <div class="full-snippet">
   <div class="mr-3 ml-2 product-items" style=" background-image: url(/food3.jpeg);
   background-position: center;
   background-size: cover;">
-  <span class="bg-danger border p-2 text-light">vegitable</span>
+  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
 </div>
 <div class="full-snippet">
   <div class="mr-3 ml-2 product-items" style=" background-image: url(/food1.jpg);
   background-position: center;
   background-size: cover;">
-  <span class="bg-danger border p-2 text-light">vegitable</span>
+  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
 </div>
 </div>
@@ -534,21 +534,21 @@
       <div class="mr-3 ml-3 product-items" style="background-image: url(/food1.jpg);
       background-position: center;
       background-size: cover;">
-      <span class="bg-danger border p-2 text-light">vegitable</span>
+      <span class="btn-danger border p-2 text-light">vegitable</span>
     </div>
   </div>
   <div class="col pr-2 full-snippet">
     <div class="mr-3 ml-3 product-items" style="background-image: url(/food2.jpeg);
     background-position: center;
     background-size: cover;">
-    <span class="bg-danger border p-2 text-light">vegitable</span>
+    <span class="btn-danger border p-2 text-light">vegitable</span>
   </div>
 </div>
 <div class="col pr-2 full-snippet">
   <div class="mr-3 ml-3 product-items" style="background-image: url(/food3.jpeg);
   background-position: center;
   background-size: cover;">
-  <span class="bg-danger border p-2 text-light">vegitable</span>
+  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
 </div>
 </div>
