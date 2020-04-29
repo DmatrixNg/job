@@ -945,13 +945,13 @@
         <div class="row footer-list">
           <div class="col">
             <ul>
-              <li><img src="tv.png" width="20"alt=""><a href="#">Youtube</a> </li>
+              <li><img src="tv.PNG" width="20"alt=""><a href="#">Youtube</a> </li>
               <li><img src="facebook-logo.png" width="20"alt=""> <a href="#">Facebook</a> </li>
             </ul>
           </div>
           <div class="col">
             <ul>
-              <li><img src="twitter-logo.png" width="20"alt=""> <a href="#">Twitter</a> </li>
+              <li><img src="twitter-logo.PNG" width="20"alt=""> <a href="#">Twitter</a> </li>
               <li><img src="youtube.JPEG" width="20"alt=""><a href="#">Bloomzon</a> </li>
             </ul>
           </div>
