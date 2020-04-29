@@ -30,7 +30,7 @@ Bootstrap with custom variables
     --success: #00b517;
     --info: #1089FF;
     --warning: #ff9017;
-    --danger: #fa3434;
+    --danger: #bd1a09;
     --light: #e4e4e4;
     --dark: #212529;
     --primary-light: #5f89f0;
@@ -431,7 +431,7 @@ h5,
 
 h6,
 .h6 {
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .lead {
@@ -3018,8 +3018,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
     color: #fff;
-    background-color: #fa3434;
-    border-color: #fa3434;
+    background-color: #bd1a09;
+    border-color: #bd1a09;
 }
 
 .btn-danger:hover {
