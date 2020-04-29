@@ -1,0 +1,91 @@
+/* Rubican */
+
+.text-muted pl-2 {
+position: absolute;
+width: 115px;
+height: 36px;
+left: 130px;
+top: 28px;
+
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.input-icons i, select {
+  position: absolute;
+  margin-bottom: 10px;
+}
+
+.input-icons {
+  width: 80%;
+}
+
+.icon {
+  padding: 10px;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 80%;
+  padding: none;
+  border: none;
+  text-align: center;
+}
+
+placeholder {
+margin-left: 10px;
+}
+
+select {
+  padding: 14px
+  min-width: 60px;
+  border: none;
+  cursor: pointer;
+  height: 26px;
+}
+
+p {
+  color: black;
+}
+
+.main-container {
+  height: 80%;
+  width: 100%;
+  margin-top: none;
+  background-color: #d7d7d7;
+}
+
+.main-container img {
+  margin-left: 11%;
+  padding-top: 2%;
+  bottom: 2%;
+}
+
+.box-container {
+  width: 35%;
+  background-color: lightgrey;
+  float: right;
+}
+
+.form-group .btn btn-primary {
+  width: 100%;
+}
+
+.form-group {
+  height: 20px;
+  border: none;
+}
+
+.form-group input {
+  height: 32px;
+}
+

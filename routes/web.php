@@ -14,7 +14,7 @@ use Illuminate\Http\Response;
 Route::get('/', function () {
 // dd(\App\Vendor::where("type",'restaurants')->get());
 
-    return view('welcome');
+    return view('landing');
 });
 Route::get('/search', function () {
 
