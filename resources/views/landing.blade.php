@@ -484,14 +484,14 @@
           background-position: center;
           background-size: cover;">
         </div>
-        <span class="btn-danger p-2 text-light">Vegitable</span>
+        <span class="btn-danger p-2 text-light">Vegetable</span>
       </div>
       <div class="full-snippet">
         <div class="mr-3 ml-2 product-items" style=" background-image: url(/g.jpg);
         background-position: center;
         background-size: cover;">
       </div>
-      <span class="btn-danger p-2 text-light">Spice</span>
+      <span class="btn-danger p-2 text-light">Spices</span>
     </div>
     <div class="full-snippet">
       <div class="mr-3 ml-2 product-items" style=" background-image: url(/c.jpg);
