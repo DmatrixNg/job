@@ -484,7 +484,7 @@
           background-position: center;
           background-size: cover;">
         </div>
-        <span class="btn-danger p-2 text-light">Vegetable</span>
+        <span class="btn-danger p-2 text-light">Vegetables</span>
       </div>
       <div class="full-snippet">
         <div class="mr-3 ml-2 product-items" style=" background-image: url(/g.jpg);
@@ -498,21 +498,21 @@
       background-position: center;
       background-size: cover;">
     </div>
-    <span class="btn-danger p-2 text-light">Soders</span>
+    <span class="btn-danger p-2 text-light">Sodas</span>
   </div>
   <div class="full-snippet">
     <div class="mr-3 ml-2 product-items" style=" background-image: url(/b.jpg);
     background-position: center;
     background-size: cover;">
   </div>
-  <span class="btn-danger p-2 text-light">Toiletry</span>
+  <span class="btn-danger p-2 text-light">Toiletries</span>
 </div>
 <div class="full-snippet">
-  <div class="mr-3 ml-2 product-items" style=" background-image: url(/food3.jpeg);
+  <div class="mr-3 ml-2 product-items" style=" background-image: url(/baby.jpg);
   background-position: center;
   background-size: cover;">
 </div>
-<span class="btn-danger p-2 text-light">Baby Food</span>
+<span class="btn-danger p-2 text-light">Baby Foods</span>
 </div>
 <div class="full-snippet">
   <div class="mr-3 ml-2 product-items" style=" background-image: url(/d.jpg);
