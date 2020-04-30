@@ -5920,7 +5920,7 @@ a.badge-warning.focus {
 
 .badge-danger {
     color: #fff;
-    background-color: #fa3434;
+    background-color: #bd1a09;
 }
 
 a.badge-danger:hover,
@@ -7701,7 +7701,7 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-    background-color: #fa3434 !important;
+    background-color: #bd1a09 !important;
 }
 
 a.bg-danger:hover,

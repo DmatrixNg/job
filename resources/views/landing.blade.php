@@ -827,23 +827,23 @@
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
         <img src="/b1.jpeg" class="card-img" height="150 "alt="...">
-        <div class="card-img-overlay text-center vendor-items bg-primary">
+        <div class="card-img-overlay text-center vendor-items bg-danger">
           <span class="card-text">Manufacturing</span>
         </div>
       </div>
     </div>
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
-        <img src="/img/slide1.jpg" class="card-img" height="150 "alt="...">
-        <div class="card-img-overlay text-center vendor-items bg-primary">
+        <img src="/p1.jpg" class="card-img" height="150 "alt="...">
+        <div class="card-img-overlay text-center vendor-items bg-danger">
           <span class="card-text">Professional Services</span>
         </div>
       </div>
     </div>
     <div class="full-snippet-vendor">
       <div class="card bg-dark text-white">
-        <img src="/img/slide1.jpg" class="card-img" height="150 "alt="...">
-        <div class="card-img-overlay text-center vendor-items bg-primary">
+        <img src="/p2.jpg" class="card-img" height="150 "alt="...">
+        <div class="card-img-overlay text-center vendor-items bg-danger">
           <span class="card-text">Sellers</span>
         </div>
       </div>
