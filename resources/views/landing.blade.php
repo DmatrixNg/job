@@ -266,20 +266,20 @@
           </span>
 <div class="carousel-inner" role="listbox">
   <div class="carousel-item active">
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l1.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l2.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l3.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l1.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l2.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l1.png" alt="" heigh="50" width="70"> </span>
         </div>
   <div class="carousel-item">
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-          <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l2.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l3.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l1.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l2.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l1.png" alt="" heigh="50" width="70"> </span>
+          <span class="mr-2 ml-2"><img src="/l2.png" alt="" heigh="50" width="70"> </span>
         </div>
         </div>
 
