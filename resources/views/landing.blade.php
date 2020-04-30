@@ -788,7 +788,7 @@
   </div>
   <div class="container mx-auto" style="width:40%; height:auto">
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7HgGiCK33ow" allowfullscreen></iframe>
     </div>
 
   </div>
@@ -905,7 +905,7 @@
           <div class="col">
             <ul>
               <li><a href="#">Privacy</a> </li>
-              <li><a href="#">Cooker</a> </li>
+              <li><a href="#">Refund Policy</a> </li>
             </ul>
           </div>
         </div>
