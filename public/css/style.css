@@ -106,6 +106,16 @@ h6 {
 .desc {
     display: inline-grid;
     font-size: x-small;
+    bottom: 10px;
+    position: absolute;
+    /* top: auto; */
+}
+.desc-1 {
+    display: inline-grid;
+    font-size: x-small;
+    bottom: 10px;
+    /* position: absolute; */
+    /* top: auto; */
 }
 .desc p {
     font-size:xx-small;

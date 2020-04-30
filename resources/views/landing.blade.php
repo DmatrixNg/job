@@ -139,7 +139,7 @@
 
                 <span>New Cart</span>
 
-                <span class="icon pt-3"><i class="fa fa-lg fa-shopping-cart"></i></span>
+                <span class="icon pt-3"><i class="fa fa-lg fa-shopping-cart text-light"></i></span>
               </button>
             </div>
           </div>
@@ -307,7 +307,7 @@
       </div>
 
       <div class="container pl-4 pr-4 product-box">
-        <div class="card m-3 product">
+        <div class="card m-3 product-1">
           <div class="row no-gutters position-relative">
             <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
@@ -315,7 +315,7 @@
               </div>
             </div>
             <div class="col-8 pt-3 pb-3">
-              <div class="desc">
+              <div class="desc-1">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
@@ -331,7 +331,7 @@
             </div>
           </div>
         </div>
-        <div class="card m-3 product">
+        <div class="card m-3 product-1">
           <div class="row no-gutters position-relative">
             <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
@@ -339,7 +339,7 @@
               </div>
             </div>
             <div class="col-8 pt-3 pb-3">
-              <div class="desc">
+              <div class="desc-1">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
@@ -355,7 +355,7 @@
             </div>
           </div>
         </div>
-        <div class="card m-3 product">
+        <div class="card m-3 product-1">
           <div class="row no-gutters position-relative">
             <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
@@ -363,7 +363,7 @@
               </div>
             </div>
             <div class="col-8 pt-3 pb-3">
-              <div class="desc">
+              <div class="desc-1">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
@@ -379,7 +379,7 @@
             </div>
           </div>
         </div>
-        <div class="card m-3 product">
+        <div class="card m-3 product-1">
           <div class="row no-gutters position-relative">
             <div class="col-4 pt-3 pb-3">
               <div class="position-absolute">
@@ -387,7 +387,7 @@
               </div>
             </div>
             <div class="col-8 pt-3 pb-3">
-              <div class="desc">
+              <div class="desc-1">
                 <span class="h6">Product name</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
@@ -428,29 +428,29 @@
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item row active">
                 <div class="col-4 float-left">
-                  <img src="/img/slide1.jpg" width="200" height="200">
-                  <span>Product name</span>
+                  <img src="/h.jpg" width="200" height="200">
+                  <span>Bloomzon Shop</span>
                 </div>
                 <div class="col-4 float-left">
-                  <img  src="/img/slide1.jpg" width="200" height="200">
-                  <span>Product name</span>
+                  <img  src="/i.jpg" width="200" height="200">
+                  <span>Toni Shop</span>
                 </div>
                   <div class="col-4 float-left">
-                    <img src="/img/slide1.jpg" width="200" height="200">
-                    <span>Product name</span>
+                    <img src="/a.jpg" width="200" height="200">
+                    <span>Construction Shop</span>
                   </div>
                   </div>
                   <div class="carousel-item row">
                     <div class="col-4 float-left">
-                      <img width="200" height="200" src="/img/slide3.jpg">
-                      <span>Product name</span>
+                      <img width="200" height="200" src="/i.jpg">
+                      <span>Dmatrix Shop</span>
                     </div>
                     <div class="col-4 float-left">
-                      <img width="200" height="200" src="/img/slide3.jpg">
-                      <span>Product name</span></div>
+                      <img width="200" height="200" src="/a.jpg">
+                      <span>Construction shop</span></div>
                     <div class="col-4 float-left">
-                      <img width="200" height="200" src="/img/slide3.jpg">
-                      <span>Product name</span></div>
+                      <img width="200" height="200" src="/i.jpg">
+                      <span>Bloomzon Shop</span></div>
                   </div>
                 </div>
                 <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
@@ -483,43 +483,43 @@
           <div class="mr-3 ml-2 product-items" style=" background-image: url(/g1.jpeg);
           background-position: center;
           background-size: cover;">
-          <span class="btn-danger border p-2 text-light">Vegitable</span>
         </div>
+        <span class="btn-danger p-2 text-light">Vegitable</span>
       </div>
       <div class="full-snippet">
-        <div class="mr-3 ml-2 product-items" style=" background-image: url(/g2.jpg);
+        <div class="mr-3 ml-2 product-items" style=" background-image: url(/g.jpg);
         background-position: center;
         background-size: cover;">
-        <span class="btn-danger border p-2 text-light">Spice</span>
       </div>
+      <span class="btn-danger p-2 text-light">Spice</span>
     </div>
     <div class="full-snippet">
-      <div class="mr-3 ml-2 product-items" style=" background-image: url(/g3.jpg);
+      <div class="mr-3 ml-2 product-items" style=" background-image: url(/c.jpg);
       background-position: center;
       background-size: cover;">
-      <span class="btn-danger border p-2 text-light">vegitable</span>
     </div>
+    <span class="btn-danger p-2 text-light">Soders</span>
   </div>
   <div class="full-snippet">
-    <div class="mr-3 ml-2 product-items" style=" background-image: url(/food2.jpeg);
+    <div class="mr-3 ml-2 product-items" style=" background-image: url(/b.jpg);
     background-position: center;
     background-size: cover;">
-    <span class="btn-danger border p-2 text-light">vegitable</span>
   </div>
+  <span class="btn-danger p-2 text-light">Toiletry</span>
 </div>
 <div class="full-snippet">
   <div class="mr-3 ml-2 product-items" style=" background-image: url(/food3.jpeg);
   background-position: center;
   background-size: cover;">
-  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
+<span class="btn-danger p-2 text-light">Baby Food</span>
 </div>
 <div class="full-snippet">
-  <div class="mr-3 ml-2 product-items" style=" background-image: url(/food1.jpg);
+  <div class="mr-3 ml-2 product-items" style=" background-image: url(/d.jpg);
   background-position: center;
   background-size: cover;">
-  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
+<span class="btn-danger p-2 text-light">Cosmetics</span>
 </div>
 </div>
 </section>
@@ -534,22 +534,22 @@
       <div class="mr-3 ml-3 product-items" style="background-image: url(/food1.jpg);
       background-position: center;
       background-size: cover;">
-      <span class="btn-danger border p-2 text-light">vegitable</span>
     </div>
+    <span class="btn-danger p-2 text-light">African</span>
   </div>
   <div class="col pr-2 full-snippet">
     <div class="mr-3 ml-3 product-items" style="background-image: url(/food2.jpeg);
     background-position: center;
     background-size: cover;">
-    <span class="btn-danger border p-2 text-light">vegitable</span>
   </div>
+  <span class="btn-danger p-2 text-light">International</span>
 </div>
 <div class="col pr-2 full-snippet">
   <div class="mr-3 ml-3 product-items" style="background-image: url(/food3.jpeg);
   background-position: center;
   background-size: cover;">
-  <span class="btn-danger border p-2 text-light">vegitable</span>
 </div>
+<span class="btn-danger p-2 text-light">Foreign Dishes</span>
 </div>
 </div>
 </div>
@@ -562,13 +562,13 @@
   <div class=" product-box">
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
+        <div class="product-img">
+          <img src="/1.jpeg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+        <div class="desc">
+          <span class="h6">Belt</span>
+          <span class="">N5,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -583,13 +583,13 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
-          <img src="/food1.jpg" class="card-img" alt="...">
+        <div class="product-img">
+          <img src="/2.webp" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+        <div class="desc">
+          <span class="h6">T-Shit</span>
+          <span class="">N3,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -604,11 +604,11 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
+        <div class="product-img">
           <img src="/food3.jpeg" class="card-img" alt="...">
         </div>
 
-        <div class="">
+        <div class="desc">
           <span class="h6">Product name</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
@@ -625,12 +625,12 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
+        <div class="product-img">
           <img src="/b2.jpg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
+        <div class="desc">
+          <span class="h6">Fruits</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
@@ -646,12 +646,12 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
+        <div class="product-img">
           <img src="/b1.jpeg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
+        <div class="desc">
+          <span class="h6">Products</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
@@ -667,12 +667,12 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
+        <div class="product-img">
           <img src="/b3.jpg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
+        <div class="desc">
+          <span class="h6">Services</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
@@ -688,12 +688,12 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
+        <div class="product-img">
+          <img src="/4.jpeg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
+        <div class="desc">
+          <span class="h6">Mouse</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
@@ -709,12 +709,33 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
+        <div class="product-img">
+          <img src="/5.jpg" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
+        <div class="desc">
+          <span class="h6">Polo</span>
+          <span class="">N10,000 <small class="text-muted"><del>N4,000</del></small> </span>
+          <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
+          <span class="small" style="font-size:x-small;">
+            <i class="fa fa-star text-warning"></i>
+            <i class="fa fa-star text-warning"></i>
+            <i class="fa fa-star text-warning"></i>
+            <i class="fa fa-star text-warning"></i>
+            <i class="fa fa-star"></i>
+            <span class="text-muted">4 reviews</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="card m-3 product">
+      <div class="no-gutters p-4">
+        <div class="product-img">
+          <img src="/6.jpg" class="card-img" alt="...">
+        </div>
+
+        <div class="desc">
+          <span class="h6">Chair</span>
           <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
@@ -730,13 +751,13 @@
     </div>
     <div class="card m-3 product">
       <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
+        <div class="product-img">
+          <img src="/3.webp" class="card-img" alt="...">
         </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+        <div class="desc">
+          <span class="h6">Tv</span>
+          <span class="">N300,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -749,69 +770,8 @@
         </div>
       </div>
     </div>
-    <div class="card m-3 product">
-      <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
-        </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
-          <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
-          <span class="small" style="font-size:x-small;">
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star"></i>
-            <span class="text-muted">4 reviews</span>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="card m-3 product">
-      <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
-        </div>
 
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
-          <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
-          <span class="small" style="font-size:x-small;">
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star"></i>
-            <span class="text-muted">4 reviews</span>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="card m-3 product">
-      <div class="no-gutters p-4">
-        <div class="">
-          <img src="/img/slide1.jpg" class="card-img" alt="...">
-        </div>
-
-        <div class="">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
-          <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
-          <span class="small" style="font-size:x-small;">
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star text-warning"></i>
-            <i class="fa fa-star"></i>
-            <span class="text-muted">4 reviews</span>
-          </span>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="more text-right mr-4 pr-3">
     <a href="#" class="icontext">

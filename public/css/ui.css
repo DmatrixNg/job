@@ -556,11 +556,25 @@ background-color: #EEEEEE;
     padding-top: 86px;
     bottom: 5px;
 }
-.product-items span {margin: 100px;}
+.full-snippet span {margin: 0px 0px 0px 85px;}
 .vendor-items span {
   /* top: 40px; */
 }
+.product-img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+}
 .product {
+  -webkit-flex-box: 1;
+  -moz-flex-box: 1;
+  -o-flex-box: 1;
+  flex-box: 1;
+  width: 170px;
+  height: 220px;
+}
+.product-1 {
   -webkit-flex-box: 1;
   -moz-flex-box: 1;
   -o-flex-box: 1;
