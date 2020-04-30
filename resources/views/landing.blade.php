@@ -27,8 +27,8 @@
         <div class="row align-items-center">
           <div class="col-lg-2 col-sm-2 col-2 ">
             <a href="/" class="brand-wrap">
-              <img class="logo" src="#" alt="logo" width="25" height="25">
-              <img class="xs-none" src="">
+              <!-- <img class="logo" src="ads1.jpg" alt="logo" width="25" height="25"> -->
+              <img class="" width="100" src="ads1.jpg">
             </a>
             <!-- brand-wrap.// -->
           </div>
@@ -316,7 +316,7 @@
             </div>
             <div class="col-8 pt-3 pb-3">
               <div class="desc-1">
-                <span class="h6">Product name</span>
+                <span class="h6">Glasses</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
                 <span class="small" style="font-size:xx-small;">
@@ -340,7 +340,7 @@
             </div>
             <div class="col-8 pt-3 pb-3">
               <div class="desc-1">
-                <span class="h6">Product name</span>
+                <span class="h6">Sneakers</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
                 <span class="small" style="font-size:xx-small;">
@@ -364,7 +364,7 @@
             </div>
             <div class="col-8 pt-3 pb-3">
               <div class="desc-1">
-                <span class="h6">Product name</span>
+                <span class="h6">Bags</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
                 <span class="small" style="font-size:xx-small;">
@@ -388,7 +388,7 @@
             </div>
             <div class="col-8 pt-3 pb-3">
               <div class="desc-1">
-                <span class="h6">Product name</span>
+                <span class="h6">Sneakers</span>
                 <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
                 <p class="pb-0 mb-0 text-primary"><b>some text</b> </p>
                 <span class="small" style="font-size:xx-small;">
@@ -404,7 +404,7 @@
           </div>
         </div>
       </div>
-      <div class="more ml-4 pl-3">
+      <div class="more text-center ml-4 pl-3">
         <a href="#" class="icontext">
           <div class="text">
 
@@ -415,7 +415,7 @@
     </div>
     <div class="col-lg-6 p-0">
         <div class="w-100 heading ca-head text-right">
-          WHOLESALER
+          WHOLESALERS AND MANUFACTURING
         </div>
         <!-- Swiper -->
 
@@ -460,7 +460,7 @@
               </div>
 
             </div>
-            <div class="more text-right mr-4 pr-3">
+            <div class="more text-center mr-4 pr-3">
               <a href="#" class="icontext">
                 <div class="text">
 
@@ -605,12 +605,12 @@
     <div class="card m-3 product">
       <div class="no-gutters p-4">
         <div class="product-img">
-          <img src="/food3.jpeg" class="card-img" alt="...">
+          <img src="/img/bag.png" class="card-img" alt="...">
         </div>
 
         <div class="desc">
-          <span class="h6">Product name</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+          <span class="h6">Bags</span>
+          <span class="">N12,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -626,12 +626,12 @@
     <div class="card m-3 product">
       <div class="no-gutters p-4">
         <div class="product-img">
-          <img src="/b2.jpg" class="card-img" alt="...">
+          <img src="/img/glasses.png" class="card-img" alt="...">
         </div>
 
         <div class="desc">
-          <span class="h6">Fruits</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+          <span class="h6">Glasses</span>
+          <span class="">N2,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -647,12 +647,12 @@
     <div class="card m-3 product">
       <div class="no-gutters p-4">
         <div class="product-img">
-          <img src="/b1.jpeg" class="card-img" alt="...">
+          <img src="img/sneakers.png" class="card-img" alt="...">
         </div>
 
         <div class="desc">
-          <span class="h6">Products</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+          <span class="h6">Sneakers</span>
+          <span class="">N25,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -668,12 +668,12 @@
     <div class="card m-3 product">
       <div class="no-gutters p-4">
         <div class="product-img">
-          <img src="/b3.jpg" class="card-img" alt="...">
+          <img src="/t2.jpeg" class="card-img" alt="...">
         </div>
 
         <div class="desc">
-          <span class="h6">Services</span>
-          <span class="">N30,000 <small class="text-muted"><del>N4,000</del></small> </span>
+          <span class="h6">Trouser</span>
+          <span class="">N3,000 <small class="text-muted"><del>N4,000</del></small> </span>
           <p class="pb-0 mb-0 text-primary" style="font-size:x-small;"><b>some text</b> </p>
           <span class="small" style="font-size:x-small;">
             <i class="fa fa-star text-warning"></i>
@@ -773,7 +773,7 @@
 
 
   </div>
-  <div class="more text-right mr-4 pr-3">
+  <div class="more text-center mr-4 pr-3">
     <a href="#" class="icontext">
       <div class="text">
 
@@ -820,7 +820,7 @@
       <div class="card bg-dark text-white">
         <img src="/b3.jpg" class="card-img" height="150 "alt="...">
         <div class="card-img-overlay text-center vendor-items bg-primary">
-          <span class="card-text">Agents</span>
+          <span class="card-text">Networking Associates</span>
         </div>
       </div>
     </div>
@@ -828,7 +828,7 @@
       <div class="card bg-dark text-white">
         <img src="/b1.jpeg" class="card-img" height="150 "alt="...">
         <div class="card-img-overlay text-center vendor-items bg-danger">
-          <span class="card-text">Manufacturing</span>
+          <span class="card-text">Manufacturers</span>
         </div>
       </div>
     </div>
@@ -852,9 +852,9 @@
   <div class="d-flex">
     <div class="col-7 text-right">
 
-    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
-    <span class="mr-2 ml-2"><img src="/img/slide1.jpg" alt="" heigh="50" width="70"> </span>
+    <span class="mr-2 ml-2"><img src="ads1.jpg" alt="" heigh="50" width="70"> </span>
+    <span class="mr-2 ml-2"><img src="ads2.jpg" alt="" heigh="50" width="70"> </span>
+    <span class="mr-2 ml-2"><img src="ads3.png" alt="" heigh="50" width="70"> </span>
 
   </div>
   <div class="col-5">
