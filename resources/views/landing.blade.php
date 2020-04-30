@@ -498,7 +498,7 @@
       background-position: center;
       background-size: cover;">
     </div>
-    <span class="btn-danger p-2 text-light">Sodas</span>
+    <span class="btn-danger p-2 text-light">Soda</span>
   </div>
   <div class="full-snippet">
     <div class="mr-3 ml-2 product-items" style=" background-image: url(/b.jpg);
